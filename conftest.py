@@ -1,4 +1,4 @@
 import os
 
-# Run Qt headless in tests: no display / no xvfb needed.
+# Запуск Qt в безголовом режиме для тестов: отключаем отображение окон
 os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
