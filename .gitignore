@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.idea/
+.vscode/
+variants.pdf
+*.pdf
+*.docx

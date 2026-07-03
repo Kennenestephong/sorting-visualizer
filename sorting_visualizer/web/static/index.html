@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sorting Visualizer (Апросимов Д.В. БИС-24-3)</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <h1>Sorting Visualizer (Апросимов Д.В. БИС-24-3)</h1>
+
+  <div class="tabs">
+    <button id="tab-single" class="tab active">Single</button>
+    <button id="tab-race" class="tab">Race</button>
+  </div>
+
+  <div class="controls">
+    <button id="play">Play</button>
+    <button id="stepBack">&lt; Step</button>
+    <button id="stepFwd">Step &gt;</button>
+    <button id="reset">Reset</button>
+    <label>Speed <input id="speed" type="range" min="5" max="500" value="60" /></label>
+    <label>Size <input id="size" type="number" min="10" max="200" value="50" /></label>
+    <label>Fill
+      <select id="fill">
+        <option value="random">random</option>
+        <option value="reversed">reversed</option>
+        <option value="nearly_sorted">nearly_sorted</option>
+      </select>
+    </label>
+    <label class="single-only">Algorithm
+      <select id="algo">
+        <option value="bubble">bubble</option>
+        <option value="insertion">insertion</option>
+        <option value="merge">merge</option>
+        <option value="quick">quick</option>
+      </select>
+    </label>
+    <button id="save">Save</button>
+    <button id="load">Load</button>
+    <button id="export">Export CSV</button>
+  </div>
+
+  <div id="single-view" class="view">
+    <canvas id="single-canvas" width="960" height="480"></canvas>
+    <div id="single-stats" class="stats"></div>
+  </div>
+
+  <div id="race-view" class="view hidden">
+    <div class="race-grid">
+      <div><h3>bubble</h3><canvas class="race-canvas" data-algo="bubble" width="470" height="240"></canvas><div class="stats" data-algo="bubble"></div></div>
+      <div><h3>insertion</h3><canvas class="race-canvas" data-algo="insertion" width="470" height="240"></canvas><div class="stats" data-algo="insertion"></div></div>
+      <div><h3>merge</h3><canvas class="race-canvas" data-algo="merge" width="470" height="240"></canvas><div class="stats" data-algo="merge"></div></div>
+      <div><h3>quick</h3><canvas class="race-canvas" data-algo="quick" width="470" height="240"></canvas><div class="stats" data-algo="quick"></div></div>
+    </div>
+  </div>
+
+  <div id="error" class="error hidden"></div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

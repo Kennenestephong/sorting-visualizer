@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, sans-serif; margin: 16px; color: #222; }
+h1 { font-size: 20px; }
+.tabs { margin-bottom: 8px; }
+.tab { padding: 6px 14px; border: 1px solid #ccc; background: #f4f4f4; cursor: pointer; }
+.tab.active { background: #ddd; font-weight: bold; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 10px 0; }
+.controls button, .controls select, .controls input { padding: 4px 8px; }
+.view.hidden { display: none; }
+canvas { border: 1px solid #ddd; background: #fafafa; width: 100%; height: auto; }
+.race-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.race-grid h3 { margin: 4px 0; font-size: 14px; }
+.stats { font-size: 13px; color: #555; margin-top: 4px; }
+.error { color: #b00; margin-top: 10px; }
+.error.hidden { display: none; }
+.hidden { display: none; }
